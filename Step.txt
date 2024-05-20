@@ -1,0 +1,39 @@
+1) If you use the pre-trained model (modelLab190Epoch) then start the "ipcamera_coco.py" file, taking into account that the streaming flow must be set to 30 FPS (there is the appropriate section on ipwebcam).
+
+2) If you want to train another model using the same dataset of images already extracted, then the steps are:
+    1: launch the "prepareData.py" file, remember to change the "path" variable. There are numerous comments within the code that describe the code.
+    2: start the "trainingModel.py" file, remember to change the name of the model in the ".save()" method to be able to save the model training during the various desired epochs.
+    3: Launch the "testModel.py" file on any model that will be saved, remember to change the model name in the ".load_model()" method.
+         The best method is the beam_search with k=3, but for 1429 images it requires about 40 minutes (obviously with mediocre hardware specifications), the greedy method instead requires only 15 minutes but is a little less accurate.
+    4: finally launch the "ipcamera_coco.py" file to carry out real-time testing.
+
+    If desired, step "3" can be skipped to directly carry out real-time testing.
+    During step "1" numerous files will be created in ".p" (pickle) format necessary to be input to step "2" for training and to step "4" for real-time testing.
+
+3) If you want to train another model using a new image dataset before performing option "2" (above), then the steps are:
+    1: Launch the "cocodataset.py" file in the "downloadImageFromCoco" folder by choosing the desired labels (the code is commented).
+    2: open the "prepareCaptions" folder containing the "StepPostExtraction" text file with the steps to follow to format the data.
+
+Necessary dependencies:
+    -pycocotools (extract images from MSCOCO)
+    -time (get the times the various scripts take)
+    -keras
+    -pickle
+    -numpy
+    -cv2
+    -matplotlib
+    -nltk
+    -skimage (to view images)
+    -tqdm
+
+########################################################
+
+REMEMBER TO CHANGE THE PATH IF YOU WANT TO RETRAIN THE MODEL, OR EXTRACT NEW IMAGE WITH NEW LABELS FROM COCO DATASET (SEE THE CODE)
+
+########################################################
+
+DOWNLOAD THE PRETRAINED MODEL FROM THIS LINK (GITHUB LIMIT TO 25MB)
+
+https://drive.google.com/file/d/1rNTPOaMdjXObxCmH0Xhda46ZQ6KHZtT5/view?usp=drive_link
+
+########################################################

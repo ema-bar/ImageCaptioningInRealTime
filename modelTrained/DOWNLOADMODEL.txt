@@ -1,0 +1,7 @@
+########################################################
+
+DOWNLOAD THE PRETRAINED MODEL FROM THIS LINK (GITHUB LIMIT TO 25MB)
+
+https://drive.google.com/file/d/1rNTPOaMdjXObxCmH0Xhda46ZQ6KHZtT5/view?usp=drive_link
+
+########################################################

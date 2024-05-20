@@ -1,0 +1,20 @@
+First change the "path" variable inside each python file, inserting the right paths.
+
+1: Run the "takeIdTrain.py" and "takeIdVal.py" files to create 2 text files containing the ids of the previously extracted images.
+
+2: Run the "takeAllTrainCaptions.py" and "takeAllValCaptions.py" files to create 2 text files containing the descriptions of the previously extracted images.
+    Bear in mind, before moving on to phase "3", that these 2 files must be cleaned of empty lines, in fact,
+    THERE ARE SOME "\n" IN THE TRAINCAPTIONS2014 FILE and IN THE COCO VALCAPTIONS2014 FILE ( THERE ARE VERY FEW CASES ) SO CHECK BEFORE STARTING THE "cleanBlankLines.py" FILE.
+
+3: Run the "cleanBlankLines.py" file on both the text file containing the training image descriptions and the one containing the validation image descriptions (both created in step "2").
+
+4: Run the "fuseAllCaptions.py" file to obtain a file containing the fusion of all the descriptions both those relating to the training phase and those relating to the validation phase.
+
+At the end you will have 7 text files:
+    1: training image id.
+    2: image id validation.
+    3: raw file with descriptions of the training images.
+    4: raw file with validation image descriptions.
+    5: Clean file with empty lines with descriptions of the training images.
+    6: clean file from empty lines with validation image descriptions.
+    7: file containing the merger of files "5" and "6".
